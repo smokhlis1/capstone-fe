@@ -52,9 +52,11 @@ function Navbar() {
             <Button className="p-3 pt-1 m-5 bg-red-400 justify-content hover:bg-black hover:text-red-500 content-center rounded" onClick={() => handleNavigation('/about')}>
               About
             </Button>
+            {isAuthenticated && (
             <Button className="p-3 pt-1 m-5 bg-red-400 justify-content hover:bg-black hover:text-red-500 content-center rounded" onClick={() => handleNavigation('/dashboard')}>
               Dashboard
             </Button>
+            )}
             {!isAuthenticated ? (
               <Button className='p-3 pt-1 m-5 bg-red-400 justify-center' onClick={signInOnClick}>
                 Login
